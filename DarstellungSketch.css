@@ -1,0 +1,41 @@
+/* CSS Darstellungsfile 
+Ziel: divs als grid 
+#container div -> Alle nachfahren 
+Problem: wie sag ich das alle ein Grid layout sein sollen
+mit div 
+1. für container sagen 
+If you declare a Grid on an element and do not position the child elements then the auto-placememt algorithm dictates what the browser should do about those unplaced grid items.
+*/
+#container {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+    --number-Grid-Elements: 50;
+    /* grid setzen */
+    display: grid;
+    /* angeben, dass das ganze 16 columns haben soll */
+    /* The grid-template-columns property specifies the number (and the widths) of columns in a grid layout. */
+    /* repeat funktion erleichtert, dass ich nicht 16 mal auto schrieben muss */
+    grid-template-columns: repeat(var(--number-Grid-Elements),5px);
+    grid-template-rows: repeat(var(--number-Grid-Elements),5px);
+    /* soll eigentlich nur für die divs hintergrund sein */
+   /* background-color: #ccc; */
+   box-sizing: border-box;
+   
+}
+
+div {
+    border-style: solid;
+    border-width: 1px; 
+    padding: 0px;
+    margin: 0px;
+    /* wird die Box-Sizing Eigenschaft runtervererbt? */
+    box-sizing: border-box;
+    background-color: white;
+}
+
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+
+}
