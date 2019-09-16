@@ -59,6 +59,7 @@ function clearField(){
 
 function userinput(){
     numberGridElements = prompt("Geben Geben Sie die Anzahl der Elemente des ETCH-A-SKETCH für diese Seite ein", "");
+    /* Beispiel: 25 % sqrt(25) = 0*/
     while(numberGridElements % Math.sqrt(numberGridElements) != 0){
         numberGridElements = prompt("Bitte eine Anzahl, dessen Wurzel zu einem Integer führt");
     }
